@@ -1,0 +1,245 @@
+.valid_info_message {
+    display: -webkit-flex;
+    display: -ms-flexbox;
+    display: -ms-flex;
+    display: flex;
+    position: fixed;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    z-index: 100;
+    padding: 0.5em;
+    background-color: rgba(0, 0, 0, 0.75);
+    border-radius: 0;
+    line-height: 1.2;
+}
+#close_block.valid_info_message {
+    z-index: 101;
+}
+.valid_info_message .wrap_info_message {
+    position: relative;
+    max-width: 400px;
+    min-width: 290px;
+    width: 100%;
+    margin: auto;
+    padding: 1.5em;
+    text-align: center;
+    background-color: #fff;
+    box-shadow: 0px 0px 15px -3px #ababab;
+    box-sizing: border-box;
+    overflow: auto;
+}
+.valid_info_message.wider .wrap_info_message {
+    max-width: 600px;
+}
+.valid_info_message .wrap_info_message p:first-child {
+    margin-top: 0;
+    font-size: 15px;
+    margin-bottom: 2em;
+}
+.valid_info_message .wrap_info_message .phone_approve_form h3 {
+    text-align: left;
+}
+.valid_info_message .wrap_info_message .box_phone_code {
+    position: relative;
+}
+.valid_info_message .wrap_info_message .box_phone_code::before {
+    content: "";
+    width: 16px;
+    height: 16px;
+    position: absolute;
+    top: 6px;
+    left: 7px;
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-image: url(//att.by/images/icons/email.png);
+    opacity: 0.6;
+}
+.valid_info_message .wrap_info_message .apr_phone_code {
+    width: 100%;
+    margin-bottom: 1em;
+    padding: 0.6em 1em;
+    padding-left: 30px;
+    color: #444;
+    border: 1px solid #aaa;
+    box-sizing: border-box;
+}
+.valid_info_message .wrap_info_message .message_text {
+    text-align: left;
+}
+.valid_info_message .wrap_info_message #add_doc_description_popup {
+    width: 100%;
+    padding: 0.3em 0.6em;
+    border: 1px solid #aaa;
+    box-sizing: border-box;
+}
+.valid_info_message .wrap_info_message .text_message {
+    text-align: left;
+}
+.valid_info_message .wrap_info_message .text_message .tab_transfer {
+    margin-top: 1em;
+}
+.valid_info_message .wrap_info_message .text_message > b:first-child {
+    display: block;
+    margin-top: 1em;
+    padding-right: 20px;
+    text-align: center;
+}
+.valid_info_message .wrap_info_message .text_message > h3:first-child {
+    margin: 0.5em 0;
+    margin-top: 1em;
+    padding-right: 20px;
+}
+.valid_info_message .wrap_info_message .text_message .message_area {
+    margin-top: 0.5em;
+    margin-bottom: 1em;
+    padding: 0.5em;
+    width: 100%;
+    box-sizing: border-box;
+    border: 1px solid #d2d2d2;
+}
+.valid_info_message .wrap_info_message .text_message .box_grey p:last-child {
+    margin-bottom: 0;
+}
+.valid_info_message .wrap_info_message .text_message form {
+    text-align: center;
+}
+.valid_info_message .wrap_info_message .text_message .auth_form {
+    background-color: #f5f5f5;
+}
+.valid_info_message .wrap_info_message .error,
+.valid_info_message .wrap_info_message .success {
+    position: relative;
+    padding-left: 2.4em;
+}
+.valid_info_message .wrap_info_message .error::before,
+.valid_info_message .wrap_info_message .success::before {
+    content: "";
+    position: absolute;
+    width: 24px;
+    height: 24px;
+    top: -2px;
+    left: 0;
+    background-size: contain;
+}
+.valid_info_message .wrap_info_message .error::before {
+    background-image: url(//att.by/c/images/icons/info.png);
+    filter: hue-rotate(140deg);
+}
+.valid_info_message .wrap_info_message .success::before {
+    background-image: url(//att.by/c/images/icons/check.png);
+}
+.valid_info_message .wrap_info_message .close_mess {
+    display: block;
+    width: 18px;
+    height: 18px;
+    padding: 0;
+    position: absolute;
+    right: 1.5em;
+    top: 0.8em;
+    background: url(//att.by/images/icons/icon_close.png) no-repeat;
+    background-size: contain;
+    border: 1px solid #fff;
+    border-radius: 50%;
+    box-shadow: 0 0 0px 1px #ddd;
+}
+.valid_info_message .wrap_info_message .frm_add {
+    position: relative;
+}
+.valid_info_message .wrap_info_message .frm_add .mail_elem,
+.valid_info_message .wrap_info_message .frm_add .apr_phone_code {
+    width: 100%;
+    margin-bottom: 1em;
+    padding: 0.6em 1em;
+    padding-left: 30px;
+    color: #444;
+    border: 1px solid #aaa;
+    box-sizing: border-box;
+}
+.valid_info_message .wrap_info_message .frm_add::before {
+    content: "";
+    width: 16px;
+    height: 16px;
+    position: absolute;
+    top: 6px;
+    left: 7px;
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-image: url(//att.by/images/icons/email.png);
+    opacity: 0.6;
+}
+.valid_info_message .wrap_info_message .num_tel {
+    position: relative;
+}
+.valid_info_message .wrap_info_message .num_tel::before {
+    content: "";
+    width: 16px;
+    height: 16px;
+    position: absolute;
+    top: 6px;
+    left: 7px;
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-image: url(//att.by/images/icons/email.png);
+    opacity: 0.6;
+}
+.valid_info_message .wrap_info_message .dashed {
+    display: inline-block;
+    padding-top: 0.5em;
+}
+
+.simple_button {
+    display: inline-block;
+    padding: 0.6em 1em;
+    font-size: 14px;
+    color: #fff;
+    white-space: nowrap;
+    border: none;
+    border-radius: 3px;
+    cursor: pointer;
+}
+.simple_button:hover {
+    text-decoration: none;
+}
+.grad_blue {
+    background: #1171b7;
+    background: linear-gradient(to right, #519cd2 0%, #519cd2 10%, #1171b7 90%, #1171b7 100%);
+    background-clip: padding-box;
+}
+.grad_blue:hover,
+.grad_blue:focus {
+    background: #1171b7;
+}
+
+.grad_green {
+    background: #609000;
+    background: linear-gradient(to right, #77b100 0%, #77b100 10%, #588300 90%, #588300 100%);
+    background-clip: padding-box;
+}
+.grad_green:hover,
+.grad_green:focus {
+    background: #588300;
+}
+
+.grad_red {
+    background: #90414a;
+    background: linear-gradient(to right, #e29da7 0%, #e28083 10%, #e25e5e 90%, #e25a63 100%);
+    background-clip: padding-box;
+}
+.grad_red:hover,
+.grad_red:focus {
+    background: #e25a63;
+}
+
+.core_load_gif {
+    display: none;
+    position: fixed;
+    bottom: 0;
+    width: 100%;
+    height: 20px;
+    z-index: 10000;
+    background-image: url('//static.att.by/img/load0_1.gif');
+    background-repeat: repeat-x;
+    opacity: 0.75;
+}

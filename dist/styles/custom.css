@@ -1,0 +1,3 @@
+.u-after-title:after {
+    content: attr(title);
+}
