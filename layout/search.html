@@ -1,0 +1,100 @@
+<script src="/scripts/liveSearchAjax.js"></script>
+<script src="/scripts/jquery.ui.datepicker-ru.js"></script>
+<script src="/scripts/jquery.maskedinput.js" type="text/javascript"></script>
+<div class="box_main_search">
+    <div class="sticky_wrap" data-id="sticky_livesearch" id="livesearch_wrapper">
+        <div class="container livesearch_wrapper">
+            <a class="logo_box" href="https://ekskursii.by/">
+                <img alt="ekskursii.by" class="logo_sticky" src="/images/logo_rubig.png" height="50">
+            </a>
+            <div class="top_search">
+                <form class="main_search" method="get" id="livesearch_form">
+                    <input type="hidden" name="calendar">
+                    <div class="main_search_item wrap_search_input">
+                        <label class="search_label icon_label" for="livesearch_input"></label>
+                        <input type="text" id="livesearch_input"
+                            placeholder="Поиск по экскурсиям, достопримечательностям, городам"
+                            class="search_input elem_form" autocomplete="off" name="search_value">
+                    </div>
+                    <div class="main_search_item">
+                        <label class="datepicker_label icon_label" for="datepicker1"></label>
+                        <input class="datepicker_input elem_form hasDatepicker" type="text" id="datepicker1"
+                            placeholder="с" data-value="2024-08-08" name="date_start" autocomplete="off"><img
+                            class="ui-datepicker-trigger" src="/images/calendar16.png" alt="..." title="...">
+                    </div>
+                    <div class="main_search_item">
+                        <label class="datepicker_label icon_label" for="datepicker2"></label>
+                        <input class="datepicker_input elem_form hasDatepicker" type="text" id="datepicker2"
+                            data-value="2024-08-08" placeholder="по" name="date_stop" autocomplete="off"><img
+                            class="ui-datepicker-trigger" src="/images/calendar16.png" alt="..." title="...">
+                    </div>
+                    <div class="main_search_item">
+                        <label class="num_persons_label icon_label" for="num_persons"></label>
+                        <select name="count_adult" class="elem_form num_human" id="num_persons">
+                            <!--{PEOPLE_COUNT_OPTIONS}-->
+                            <option value="1">1 взрослый</option>
+
+                        </select>
+                    </div>
+                    <div class="main_search_item">
+                        <label class="num_child_label icon_label" for="num_child"></label>
+                        <select name="count_child" class="elem_form num_human" id="num_child">
+                            <option value="0" selected="">без детей</option>
+                            <option value="1">1 ребёнок</option>
+                        </select>
+                    </div>
+                    <div class="main_search_item">
+                        <button class="button orange search_button" type="submit">Искать</button>
+                    </div>
+                </form>
+                <div class="close_search_box">
+                    <button class="close_search" type="button" id="closeSearch"></button>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<script>
+    $(document).ready(function () {
+        $("#datepicker1").datepicker({
+
+            minDate: "+1",
+            maxDate: "+1y +1w +3d",
+            changeMonth: true,
+            changeYear: true,
+            dateFormat: "dd-mm-yy",
+            showButtonPanel: false,
+            constrainInput: true,
+
+
+            onClose: function (selectedDate) {
+                $("#datepicker2").datepicker("option", "minDate", selectedDate);
+                var date = new Date(selectedDate);
+                $("#datepicker2").focus();
+
+
+            },
+
+            showOn: "both",
+            buttonImage: "//static.att.by/img/calendar16.png",
+            buttonImageOnly: true,
+            numberOfMonths: 1
+        });
+
+        $("#datepicker2").datepicker({
+
+            minDate: "+1",
+            maxDate: "+1y +1w +3d",
+            changeMonth: true,
+            changeYear: true,
+            dateFormat: "dd-mm-yy",
+            showButtonPanel: false,
+            constrainInput: true,
+
+            showOn: "both",
+            buttonImage: "//static.att.by/img/calendar16.png",
+            buttonImageOnly: true,
+            numberOfMonths: 1
+        });
+    })
+</script>
