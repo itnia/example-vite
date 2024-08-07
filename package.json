@@ -13,6 +13,7 @@
     "vite": "^5.3.4"
   },
   "dependencies": {
-    "vite-plugin-html-inject": "^1.1.2"
+    "vite-plugin-html-inject": "^1.1.2",
+    "vite-plugin-multi-pages": "^0.0.14"
   }
 }

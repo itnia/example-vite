@@ -1,3 +1,4 @@
+import { resolve } from 'path'
 import { defineConfig } from 'vite';
 import injectHTML from 'vite-plugin-html-inject';
 import path from 'path';
@@ -24,6 +25,7 @@ function getHtmlEntries() {
 
 
 export default defineConfig({
+    // root: "./src/", // - путь билда
     build: {
         rollupOptions: {
             output: {
@@ -35,5 +37,7 @@ export default defineConfig({
             input: getHtmlEntries(),
         }
     },
-    plugins: [injectHTML()],
+    plugins: [
+        injectHTML(),
+    ],
 });
